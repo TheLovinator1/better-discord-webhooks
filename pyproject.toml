@@ -1,11 +1,14 @@
 [tool.poetry]
 name = "webhook-filter"
 version = "0.1.0"
-description = ""
+description = "Filter webhooks"
 authors = ["Joakim Hellsén <tlovinator@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = "^0.78.0"
+uvicorn = { extras = ["standard"], version = "^0.17.6" }
+discord-webhook = "^0.16.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
