@@ -16,7 +16,7 @@ def send_embed(embed: DiscordEmbed):
         rate_limit_retry=True,
     )
     webhook.add_embed(embed)
-    webhook.execute()
+    return webhook.execute()
 
 
 def send_webhook(msg: str):
@@ -27,4 +27,4 @@ def send_webhook(msg: str):
         content=msg,
         rate_limit_retry=True,
     )
-    webhook.execute()
+    return webhook.execute()
