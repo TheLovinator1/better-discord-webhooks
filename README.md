@@ -1,3 +1,3 @@
-# webhook-filter
+# better-github-webhooks-for-discord
 
-Filter webhooks
+Better GitHub webhooks.

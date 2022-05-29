@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "webhook-filter"
+name = "better-github-webhooks"
 version = "0.1.0"
 description = "Filter webhooks"
 authors = ["Joakim Hellsén <tlovinator@gmail.com>"]

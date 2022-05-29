@@ -1,4 +1,4 @@
-from webhook_filter import __version__
+from better_github_webhooks import __version__
 
 
 def test_version():
