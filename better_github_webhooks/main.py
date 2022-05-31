@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 
+from better_github_webhooks.github.issues import issues
 from better_github_webhooks.github.push import pushed
 from better_github_webhooks.github.star import star
 from better_github_webhooks.webhook import send_embed
@@ -19,6 +20,9 @@ async def webhook(request: Request):
         embed = star(response)
     elif x_github_event == "push":
         embed = pushed(response)
+    elif x_github_event == "issues":
+        embed = issues(response)
+
     # Send Webhook to Discord
     if embed:
         response = send_embed(embed)

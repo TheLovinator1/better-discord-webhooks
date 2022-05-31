@@ -28,9 +28,9 @@ def pushed(response):
         print(field_row)
 
     embed = DiscordEmbed(
+        title=f"{repo_name} - {num_commits} new commit{'' if num_commits == 1 else 's'}!",  # noqa: E501, pylint: disable=line-too-long
         description="\n".join(commit_list),
         url=repo_url,
-        title=f"{repo_name} - {num_commits} new commit{'' if num_commits == 1 else 's'}!",  # noqa: E501, pylint: disable=line-too-long
     )
 
     # Username and avatar of the user who pushed to the repository
