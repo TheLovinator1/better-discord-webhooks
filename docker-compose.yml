@@ -1,0 +1,12 @@
+services:
+  better-github-webhooks:
+    # image: ghcr.io/thelovinator1/better-github-webhooks:master
+    build: .
+    env_file:
+      - .env
+    container_name: better-github-webhooks
+    environment:
+      - WEBHOOK_URL=${WEBHOOK_URL}
+    ports:
+      - "20526:5000"
+    restart: unless-stopped
