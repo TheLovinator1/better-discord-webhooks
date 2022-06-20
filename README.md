@@ -1,3 +1,3 @@
-# better-github-webhooks-for-discord
+# Better Discord webhooks
 
-Better GitHub webhooks.
+Better Discord webhooks.

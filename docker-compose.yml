@@ -1,10 +1,10 @@
 services:
-  better-github-webhooks:
-    # image: ghcr.io/thelovinator1/better-github-webhooks:master
+  better-discord-webhooks:
+    # image: ghcr.io/thelovinator1/better-discord-webhooks:master
     build: .
     env_file:
       - .env
-    container_name: better-github-webhooks
+    container_name: better-discord-webhooks
     environment:
       - WEBHOOK_URL=${WEBHOOK_URL}
     ports:

@@ -29,16 +29,16 @@ RUN curl -sSL https://install.python-poetry.org | python -
 ENV PATH="/home/botuser/.local/bin/:${PATH}"
 
 # Copy files from our repository to the container.
-ADD --chown=botuser:botuser pyproject.toml poetry.lock README.md LICENSE /home/botuser/better-github-webhooks/
+ADD --chown=botuser:botuser pyproject.toml poetry.lock README.md LICENSE /home/botuser/better-discord-webhooks/
 
 # Change directory to where we will run the bot.
-WORKDIR /home/botuser/better-github-webhooks
+WORKDIR /home/botuser/better-discord-webhooks
 
 # Install the requirements.
 RUN poetry install --no-interaction --no-ansi --no-dev
 
 # Add main.py and settings.py to the container.
-ADD --chown=botuser:botuser better_github_webhooks /home/botuser/better-github-webhooks/better_github_webhooks/
+ADD --chown=botuser:botuser better_discord_webhooks /home/botuser/better-discord-webhooks/better_discord_webhooks/
 EXPOSE 5000
 
-CMD ["poetry", "run", "uvicorn", "better_github_webhooks.main:app", "--host=0.0.0.0", "--port=5000"]
+CMD ["poetry", "run", "uvicorn", "better_discord_webhooks.main:app", "--host=0.0.0.0", "--port=5000"]

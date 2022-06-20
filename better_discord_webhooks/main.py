@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Request
 
-from better_github_webhooks.github.issues import issues
-from better_github_webhooks.github.push import pushed
-from better_github_webhooks.github.star import star
-from better_github_webhooks.webhook import send_embed
+from better_discord_webhooks.github.issues import issues
+from better_discord_webhooks.github.push import pushed
+from better_discord_webhooks.github.star import star
+from better_discord_webhooks.webhook import send_embed
 
 app = FastAPI()
 

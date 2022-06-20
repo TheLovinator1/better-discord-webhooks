@@ -5,7 +5,7 @@ Availability
     Organization webhooks
     GitHub Apps with the issues permission
 """
-from better_github_webhooks.diff import get_diff
+from better_discord_webhooks.diff import get_diff
 from discord_webhook import DiscordEmbed
 
 

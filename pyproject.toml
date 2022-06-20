@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "better-github-webhooks"
+name = "better-discord-webhooks"
 version = "0.1.0"
-description = "Filter webhooks"
+description = "Better Discord Webhooks"
 authors = ["Joakim Hellsén <tlovinator@gmail.com>"]
 
 [tool.poetry.dependencies]
